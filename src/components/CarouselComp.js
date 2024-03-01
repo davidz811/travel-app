@@ -1,24 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { BsArrowLeftSquareFill } from 'react-icons/bs';
 import { BsArrowRightSquareFill } from 'react-icons/bs';
+import image1 from '../assets/borabora.jpg';
+import image2 from '../assets/borabora2.jpg';
+import image3 from '../assets/maldives2.jpg';
+import image4 from '../assets/maldives3.jpg';
+
 
 const CarouselComp = () => {
-    const carouselImages = [
-        {
-            url: 'http://localhost:3000/static/media/maldives.6912181c1b1fc6c5fa6f.jpg'
-        },
+    const carouselImages = [image1, image2, image3, image4];
 
-        {
-            url: 'http://localhost:3000/static/media/borabora2.726ded1de37915f83c71.jpg'
-        },
-
-        {
-            url: 'http://localhost:3000/static/media/maldives2.ee088b6ef17100d7f85f.jpg'
-        },
-        {
-            url: 'http://localhost:3000/static/media/borabora.e6c4841f299365fdfa10.jpg'
-        }
-    ]
 
     const [index, setIndex] = useState(0);
     const carouselLength = carouselImages.length;
@@ -37,7 +28,7 @@ const CarouselComp = () => {
     return (
         <div name='views' className='max-w-[1240px] h-full w-full mx-auto relative flex justify-center items-center'>
             <img 
-                src={carouselImages[index].url}
+                src={carouselImages[index]}
                 alt={`Index ${index}`}
             />
                     <BsArrowLeftSquareFill
